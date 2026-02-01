@@ -5,21 +5,6 @@ bmi_window.title("BMI Calculator")
 bmi_window.minsize(width=400 , height=300)
 bmi_window.config(padx=30 , pady=30 )
 
-#weight_settings
-w_label = Label(text="Enter your weight(kg):" , font=("Arial" , 10 , "normal"))
-w_label.pack()
-
-weight_entry = Entry(bmi_window , width=15)
-weight_entry.pack(pady=5)
-
-#height_settings
-h_label = Label(text="Enter your height(cm):" , font=("Arial" , 10 , "normal"))
-h_label.pack(pady=(10,0))
-
-height_entry = Entry(bmi_window , width=15)
-height_entry.pack(pady=5)
-
-
 def calculate_bmi():
 
     w_input = weight_entry.get()
@@ -52,6 +37,22 @@ def calculate_bmi():
     except ValueError:
         m_label.config(text="Enter a valid number!")
 
+
+# UI SETTİNGS
+
+#weight_settings
+w_label = Label(text="Enter your weight(kg):" , font=("Arial" , 10 , "normal"))
+w_label.pack()
+
+weight_entry = Entry(bmi_window , width=15)
+weight_entry.pack(pady=5)
+
+#height_settings
+h_label = Label(text="Enter your height(cm):" , font=("Arial" , 10 , "normal"))
+h_label.pack(pady=(10,0))
+
+height_entry = Entry(bmi_window , width=15)
+height_entry.pack(pady=5)
 
 #Calculate_button
 c_button = Button(text="Calculate" , command=calculate_bmi)
